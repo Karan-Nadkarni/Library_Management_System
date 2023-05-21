@@ -1,0 +1,65 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+</head>
+<body>
+	<nav class="navbar-expand-lg navbar-light bg-light navbar-custom navbar-fixed-top">
+  	<div class="container-fluid">
+    		<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="{% static 'images/pen2.png' %}" height="40" width="40"></a>
+    		</div>
+			<ul class="nav navbar-nav">
+					<li><a href="#">Home</a></li>
+					<li><a href='{% url 'bi' %}'>Issue Books</a></li>
+					<li><a href='{% url 'br' %}'>Return Books</a></li>
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+							<a class="dropbtn" data-toggle="dropdown" href="#">Sign-In,Out/Register
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href="{% url 'signin' %}">Sign-In</a></li>
+									<li><a href="{% url 'signout' %}">Sign-Out</a></li>
+									<li><a href="{% url 'reg' %}">Register</a></li>
+
+							</ul>
+
+			</ul>
+
+	</div>
+  	</nav>
+	<div class="background-image">
+			<img src="{% static 'images/book3.jpg' %}" width="1600" height="1100">
+			<div class="text">HOUSE OF WORDS</div>
+
+
+	</div>
+	<div class="container">
+	<br>
+			<hr class="style-seven">
+			<p style="font-family: 'Poppins',sans-serif;"align="center">ABOUT US</p>
+			<hr class="style-seven">
+
+	</div>
+	<div class="body-text">
+	<br>
+		<p>Reading is not a hobby. It is a habit. We believe that all of us should form this habit. Reading a book is amazing.</p>
+		<p>It is comforting , It makes you imagine things and paint a world in your mind from mere words in a book.</p>
+		<p>With a wide range of books, we here are always committed to making your literary journey a wonderful one.</p>
+	</div>
+	<br><br><br><br><br><br>
+	<div class="footer">
+        <div class="container">Copyright &copy; 2020 Library Website</div>
+    </div>
+
+</body>
+</html>

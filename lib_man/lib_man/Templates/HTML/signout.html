@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/signout.css' %}">
+</head>
+<body>
+	<nav class="navbar-expand-lg navbar-light bg-light navbar-custom navbar-fixed-top">
+  	<div class="container-fluid">
+    		<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="{% static 'images/pen2.png' %}" height="40" width="40"></a>
+    		</div>
+			<ul class="nav navbar-nav">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'bi' %}">Issue Books</a></li>
+					<li><a href="{% url 'br' %}">Return Books</a></li>
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+							<a class="dropbtn" data-toggle="dropdown" href="#">Sign-In,Out/Register
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href="{% url 'signin' %}">Sign-In</a></li>
+									<li><a href="{% url 'signout' %}">Sign-Out</a></li>
+									<li><a href="{% url 'reg' %}">Register</a></li>
+
+							</ul>
+			</ul>
+
+	</div>
+  	</nav>
+	<br><br>
+	<div class="background-image">
+			<img src="{% static 'images/bookstack2.jpeg' %}" width="1800">
+			<div class="boxed over-img">
+					<form action="logout_sub" method="post" class="over-img" style="margin-left:590px">
+						{% csrf_token %}
+								<p align="center" style="font-size:40px;color:white;">SIGN OUT</p><br>
+								<b style="font-size:20px;color:white;">Name</b><br><br>
+								     <input type="text" name="name" placeholder="Enter Name" size="32" style="border-radius: 5px; border: 1px; height:30px;background-color: #faeee0;"><br><br><br>
+										 <br><br><br>
+								<input type="submit" class="button" name="submit" value="LOGOUT" style=" padding-left:90px;width:250px"><br><br>
+
+					</form>
+			</div>
+	</div>
+</body>
+</html>

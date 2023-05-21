@@ -1,0 +1,140 @@
+.navbar-custom
+		{
+            			background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+
+       		}
+		.navbar-custom .navbar-custom .navbar-text
+		{
+            			color: yellow;
+     		}
+		.navbar-brand
+		{
+			padding-top:3px;
+			-webkit-filter: invert(1);
+			 filter: invert(1);
+		}
+		.navbar-nav li a
+		{
+			font-family:Baskerville Old Face;
+			font-size:20;
+			color:white;
+			padding-top:17px;
+
+		}
+		.navbar-nav li.right
+		{
+			position: absolute;
+			width: 100%;
+			left:0;
+			margin:auto;
+			margin-left:80%;
+		}
+		.navbar-nav a:hover , .dropdown:hover
+		{
+			background: #b5651d !important;
+			color: #fff;
+			text-decoration:underline !important;
+			transition-property:background,color,text-decoration;
+			transition-duration:0.5s,0.5s,0.5s;
+
+		}
+		.dropdown:hover
+		{
+			background: #b5651d !important;
+			color: #fff;
+			text-decoration:underline !important;
+			transition-property:background,color,text-decoration;
+			transition-duration:0.5s,0.5s,0.5s;
+		}
+		.dropdown-menu
+		{
+			background-color:beige;
+			color:black;
+
+		}
+		.dropdown .dropbtn
+		{
+  			color: white;
+		}
+		.dropdown:hover .dropbtn
+ 		{
+  			background-color: #b5651d !important;
+  			color: white;
+		}
+
+       		.dropdown-menu li a
+		{
+			color: black;
+		}
+		.dropdown-menu li a:hover
+		{
+			color:white;
+			text-decoration:underline !important;
+			transition-property:background,hcolor,text-decoration;
+			transition-duration:0.5s,0.5s,0.5s;
+		}
+		.background-image
+		{
+			background-size: cover;
+		}
+		.container2
+		{
+			margin-top:-400px;
+			margin-left:130px;
+		}
+		.boxed
+		{
+			position:absolute;
+			background-color: white;
+			top: -10%;
+			left: 19%;
+			width: 800px;
+			height:500px;
+			border-radius:10px;
+			padding: 20px;
+			margin: 20px;
+			margin-left:30px;
+			margin-top:170px;
+			box-shadow:  0 0 15px black;
+		}
+		.select1:focus
+		{
+			box-shadow: 0 0 1pt 1pt black;
+			transition: box-shadow 1s;
+		}
+		.text1:hover
+		{
+			box-shadow: 0 0 1pt 1pt black;
+			transition: box-shadow 1s;
+		}
+		.boxed form select
+		{
+
+			font-family:Bahnschrift;
+			font-size:18px;
+			height:50px;
+		}
+		.boxed form input
+		{
+			outline:none;
+
+			border-width:1px;
+			font-family:Bahnschrift;
+			font-size:18px;
+			height:50px;
+		}
+		.button
+		{
+			width:150px;
+			margin-left:-10px;
+			background-color:beige;
+			padding: 15px 32px;
+			text-align: center;
+			font-size:16px;
+			cursor: pointer;
+		}
+		.button:hover
+		{
+			box-shadow: 0 0 1pt 1pt black;
+			transition: box-shadow 1s;
+		}

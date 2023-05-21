@@ -1,0 +1,128 @@
+		.navbar-custom
+		{
+            				background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+
+       		}
+		.navbar-custom .navbar-custom .navbar-text
+		{
+            			color: yellow;
+     		}
+		.navbar-brand
+		{
+			padding-top:3px;
+			-webkit-filter: invert(1);
+			 filter: invert(1);
+
+		}
+		.navbar-nav li a
+		{
+			font-family:Baskerville Old Face;
+			font-size:20;
+			color:white;
+			padding-top:17px;
+
+		}
+		.navbar-nav li.right
+		{
+			position: absolute;
+			width: 100%;
+			left:0;
+			margin:auto;
+			margin-left:80%;
+		}
+		.navbar-nav a:hover , .dropdown:hover
+		{
+			background: #b5651d !important;
+			color: #fff;
+			text-decoration:underline !important;
+			transition-property:background,color,text-decoration;
+			transition-duration:0.5s,0.5s,0.5s;
+
+		}
+		.dropdown:hover
+		{
+			background: #b5651d !important;
+			color: #fff;
+			text-decoration:underline !important;
+			transition-property:background,color,text-decoration;
+			transition-duration:0.5s,0.5s,0.5s;
+		}
+		.dropdown-menu
+		{
+			background-color:beige;
+			color:black;
+
+		}
+		.dropdown .dropbtn
+		{
+
+  			color: white;
+
+		}
+		.dropdown:hover .dropbtn
+ 		{
+  			background-color: #b5651d !important;
+  			color: white;
+		}
+
+       	.dropdown-menu li a
+		{
+			color: black;
+		}
+		.dropdown-menu li a:hover
+		{
+			color:white;
+			text-decoration:underline !important;
+			transition-property:background,hcolor,text-decoration;
+			transition-duration:0.5s,0.5s,0.5s;
+		}
+		.background-image
+		{
+			position:relative;
+			min-height: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+		}
+		.boxed .over-img
+		{
+			position:absolute;
+			top: -1%;
+			left: 1%;
+			background: inherit;
+			backdrop-filter: blur(9px);
+			width: 320px;
+			height:440px;
+			box-shadow: 0 0 5px 0;
+			padding: 20px;
+			margin: 20px;
+			margin-left:700px;
+			margin-top:100px;
+			border-radius: 10px;
+		}
+		.button
+		{
+			margin-left:2px;
+			background-color:#faeee0;
+			border: 0px solid black;
+			padding: 7px 106px;
+			text-align: center;
+			font-size:19px;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+		.link
+		{
+			color:white;
+		}
+
+		.p
+		{
+			font-family: 'Poppins',sans-serif;
+		}
+
+		.b
+		{
+			font-family: 'Poppins',sans-serif;
+		}

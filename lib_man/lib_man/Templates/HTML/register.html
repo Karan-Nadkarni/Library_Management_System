@@ -1,0 +1,55 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+</head>
+<body>
+	<nav class="navbar-expand-lg navbar-light bg-light navbar-custom navbar-fixed-top">
+  	<div class="container-fluid">
+    		<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="{% static 'images/pen2.png' %}" height="40" width="40"></a>
+    		</div>
+			<ul class="nav navbar-nav">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'bi' %}">Issue Books</a></li>
+					<li><a href="{% url 'br' %}">Return Books</a></li>
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+							<a class="dropbtn" data-toggle="dropdown" href="#">Sign-In,Out/Register
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href="{% url 'signin' %}">Sign-In</a></li>
+									<li><a href="{% url 'signout' %}">Sign-Out</a></li>
+									<li><a href="{% url 'reg' %}">Register</a></li>
+
+							</ul>
+
+			</ul>
+
+	</div>
+  	</nav>
+	<br><br>
+	<div class="background-image">
+			<img src="{% static 'images/bookstack2.jpeg' %}" height="1200" width="1519">
+			<div class="boxed over-img">
+					<form action="regsub" method="post" class="over-img" style="position:absolute;top: -10%;left: 1%;background: inherit;backdrop-filter: blur(9px);width: 400px;height: 535px;padding: 20px;margin:20px;margin-left:530px;margin-top:170px;border-radius: 10px;">
+						{% csrf_token %}
+								<p align="center" style="font-size:35px; color: black;">REGISTER</p><br>
+								<b style="font-size:20px;color: black;">Name</b><br>
+								<input type="text" name="name" placeholder="Enter Full Name" size="37" style="height:30px;border-radius: 5px; border: 1px;background-color: #faeee0;"><br><br>
+								<b style="font-size:20px;color:black;">Email</b><br>
+								<input type="text" name="email" placeholder="Enter Email-ID" size="37" style="height:30px;border-radius: 5px; border: 1px;background-color: #faeee0;"><br><br>
+								<b style="font-size:20px;color:black;">Password</b><br>
+								<input type="password" name="pwd" placeholder="Enter Password" size="37" style="height:30px;border-radius: 5px; border: 1px;background-color: #faeee0;"><br><br>
+								<input type="submit" class="button" name="submit" value="Submit" style="margin-left:105px">
+
+					</form>
+			</div>
+	</div>
+</body>
+</html>

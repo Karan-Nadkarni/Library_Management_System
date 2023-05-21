@@ -1,0 +1,108 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://www.fontspace.com/chomsky-font-f33189" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bookissue.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-image:url({% static 'images/book-white.jpg' %})">
+	<nav class="navbar-expand-lg navbar-light bg-light navbar-custom navbar-fixed-top">
+  	<div class="container-fluid">
+    		<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="{% static 'images/pen2.png' %}" height="40" width="40"></a>
+    		</div>
+			<ul class="nav navbar-nav">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="#">Issue Books</a></li>
+					<li><a href="{% url 'br' %}">Return Books</a></li>
+
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+							<a class="dropbtn" data-toggle="dropdown" href="#">Sign-In,Out/Register
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href="{% url 'signin' %}">Sign-In</a></li>
+									<li><a href="{% url 'signout' %}">Sign-Out</a></li>
+									<li><a href="{% url 'reg' %}">Register</a></li>
+
+							</ul>
+
+			</ul>
+
+	</div>
+  	</nav>
+	<br><br><br><br>
+	<hr>
+
+	<h1 font-size:110px;margin-left:-30px;">OUR COLLECTION</h1>
+	<hr>
+	<br><br><br>
+	<div class="container" style="margin-left:300px">
+	<ul class='list-inline'>
+			<li class='book'>
+					<img src='https://images-na.ssl-images-amazon.com/images/I/51+2bxo4TuL._SX325_BO1,204,203,200_.jpg' />
+			</li>
+
+			<li class='book'>
+					<img src='https://images-na.ssl-images-amazon.com/images/I/51R7lc5BHkL._SX306_BO1,204,203,200_.jpg' />
+			</li>
+
+			<li class='book'>
+					<img src='https://images-na.ssl-images-amazon.com/images/I/411pMuiK0WL._SX328_BO1,204,203,200_.jpg' />
+			</li>
+
+			<li class='book'>
+					<img src='https://m.media-amazon.com/images/I/41gqJ6z++uL._SY346_.jpg' />
+			</li>
+			<li class='book'>
+					<img src='https://images-na.ssl-images-amazon.com/images/I/41pjpqDmBEL._SX318_BO1,204,203,200_.jpg' />
+			</li>
+
+			<li class='book'>
+					<img src='https://m.media-amazon.com/images/I/81xow6+2uJL._AC_UY327_FMwebp_QL65_.jpg' />
+			</li>
+	</ul>
+	</div>
+	<br><br><br>
+	<p style="margin-left:-30px;font-family:Charlemagne STD;font-size:15px;">&larr;&rarr;</p>
+	<p style="margin-left:-30px;font-family:Charlemagne STD;font-size:15px;">And many more</p>
+	<div class="container-dark" style="background-image:url({% static 'images/greenleaves.jpg' %})">
+
+				<div class="container3">
+				<form action="bi_sub" method="post" class="over-img" style="background: inherit;backdrop-filter: blur(9px); width:520px; height:450px; 	padding: 10px;margin-left:110px; border-radius: 10px;box-shadow: 0 0 10px 0.5px;text-align:center;position:absolute;left: 25%; margin-top:110px;"">
+						{% csrf_token %}
+									<p align="center" class="hd" style="font-size:40px;style="font-family: 'Chivo', sans-serif Text MT; margin-left:-390px; "">GET A BOOK</p><br>
+									<input type="text" name="name" placeholder="Enter full name" size="32" style="margin-left:-60px;" class="text1"><br><br>
+									<select name="book" id="book" style="margin-left:-60px; height:30px " class="select1""">
+											<option>Select Book</option>
+											<option value="Wings Of Fire">Wings Of Fire</option>
+											<option value="Harry Potter & The Philosopher's Stone">Harry Potter & The Philosopher's Stone</option>
+											<option value="The Alchemist">The Alchemist</option>
+											<option value="The Lord Of The Rings">The Lord Of The Rings</option>
+											<option value="The Bourne Identity">The Bourne Identity</option>
+											<option value="The Shining">The Shining</option>
+											<option value="Sherlock Holmes">Sherlock Holmes</option>
+									</select><br><br><br>
+									<select name="copies" id="copies" style="margin-left:-200px; height:30px" class="select1">
+											<option>Number of copies</option>
+											<option value="1">One</option>
+											<option value="2">Two</option>
+									</select><br><br>
+									<input type="submit" class="button" name="submit" style="margin-left:-30px; margin-top:60px" value="ISSUE">
+								</div>
+
+				</form>
+			</div>
+
+
+
+</body>
+</html>

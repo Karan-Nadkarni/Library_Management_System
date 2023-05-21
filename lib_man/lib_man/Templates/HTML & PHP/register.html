@@ -1,0 +1,83 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+<script type="text/javascript">
+function checkMonth()
+{
+		var getinput =  document.getElementById('month').value;
+		if(getinput==1)
+		{
+			pricebox.value=300;
+		}
+		else if(getinput==2)
+		{
+			pricebox.value=500;
+		}
+		else if(getinput==3)
+		{
+			pricebox.value=700;
+		}
+
+
+}
+
+</script>
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top">
+  	<div class="container-fluid">
+    		<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="{% static 'images/pen.png' %}" height="50" width="50"></a>
+    		</div>
+			<ul class="nav navbar-nav">
+					<li><a href='{%url "home"%}'>Home</a></li>
+					<li><a href='{%url "bi"%}'>Issue Books</a></li>
+					<li><a href='{%url "br"%}'>Return Books</a></li>
+					<li><a href='{%url "sr"%}'>Membership Renew</a></li>
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+							<a class="dropbtn" data-toggle="dropdown" href="#">Sign-In/Register
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href='{%url "sign"%}'>Sign-In</a></li>
+									<li><a href='#'>Register</a></li>
+
+							</ul>
+					<li ><a href="#">Contact Us</a></li>
+			</ul>
+
+	</div>
+  	</nav>
+	<br><br>
+	<div class="background-image">
+			<img src="{% static 'images/book-stack1.jpg' %}" height="1200" width="1519">
+			<div class="boxed over-img">
+					<form action="register.php" method="post" class="over-img">
+								<p align="center" style="font-size:25px;font-family:Baskerville Old Face;text-decoration:underline;">Register</p>
+								<p style="font-size:20px;font-family:Baskerville Old Face;">Name:</p><input type="text" placeholder="Enter Full Name" size="30" name="nm"><br><br>
+
+								<p style="font-size:20px;font-family:Baskerville Old Face;">Email:</p><input type="text" placeholder="Enter Email-ID" size="30" name="em"><br><br>
+								<p style="font-size:20px;font-family:Baskerville Old Face;">Password:</p><input type="password" placeholder="Enter Password" size="30" name="pwd"><br><br>
+								<p style="font-size:20px;font-family:Baskerville Old Face;">Date Of Registration:</p><input type="text" placeholder="yyyy/mm/dd" size="30" name="dor"><br><br>
+								<p style="font-size:20px;font-family:Baskerville Old Face;">Subscription Duration(Months):</p>
+								<select name="month" id="month" onchange="checkMonth()">
+										<option>Pick No. Of Months</option>
+										<option value=1>One</option>
+										<option value=2>Two</option>
+										<option value=3>Three</option>
+								</select><br><br>
+
+								<input type="button" class="button" name="submit" value="Submit">
+
+					</form>
+			</div>
+	</div>
+</body>
+</html>

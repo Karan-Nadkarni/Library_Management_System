@@ -1,0 +1,68 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/bookreturn.css' %}">
+
+</head>
+<body>
+	<nav class="navbar-expand-lg navbar-light bg-light navbar-custom navbar-fixed-top">
+  	<div class="container-fluid">
+    		<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="{% static 'images/pen2.png' %}" height="40" width="40"></a>
+    		</div>
+			<ul class="nav navbar-nav">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'bi' %}">Issue Books</a></li>
+					<li><a href="#">Return Books</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+							<a class="dropbtn" data-toggle="dropdown" href="#">Sign-In,Out/Register
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href="{% url 'signin' %}">Sign-In</a></li>
+									<li><a href="{% url 'signout' %}">Sign-Out</a></li>
+									<li><a href="{% url 'reg' %}">Register</a></li>
+
+							</ul>
+
+			</ul>
+
+	</div>
+  	</nav>
+	<div class="background-image">
+			<img src="{% static 'images/greenleaves1.jpg' %}" height="900px"; width="1600px";>
+			<div class="boxed over-img" style="margin-left:90px">
+			<div class="container1">
+							<img src="{% static 'images/read.jpg' %}" height="400" width="300" style="margin-top:30px;">
+				</div>
+				<div class="container2">
+					<form action="br_sub" method="post" class="over-img">
+						{% csrf_token %}
+								<p align="center" style="font-size:29px;font-family:Arno Pro Caption;color:black;margin-left:160px;">Return Books</p>
+								<select name="book" id="book" class="text1" style="margin-left:220px;" class="select1">
+										<option>Select Book</option>
+										<option value="Wings Of Fire">Wings Of Fire</option>
+										<option value="Harry Potter & The Philosopher's Stone">Harry Potter & The Philosopher's Stone</option>
+										<option value="The Alchemist">The Alchemist</option>
+										<option value="The Lord Of The Rings">The Lord Of The Rings</option>
+										<option value="The Bourne Identity">The Bourne Identity</option>
+										<option value="The Shining">The Shining</option>
+										<option value="Sherlock Holmes">Sherlock Holmes</option>
+								</select><br><br>
+								<select name="copies" id="copies" style="margin-left:220px; height:30px" class="select1">
+										<option>Number of copies</option>
+										<option value="1">One</option>
+										<option value="2">Two</option>
+								</select><br><br>
+								<input type="submit" class="button" name="submit" value="RETURN" style="margin-left:305px;">
+
+					</form>
+				</div>
+
+			</div>
+	</div>
+</body>
+</html>
