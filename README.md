@@ -8,7 +8,7 @@ Library management system built using Python and database created using MYSQL Wo
 ## How To Run
 If Django is not installed 
 ```Bash
-  pip install Django
+  pip install django
 ```
 
 To run 
